@@ -7,7 +7,7 @@ This project explores a last-mile grocery delivery dataset to uncover patterns t
 
 The dataset contains over 43,000 delivery records and includes information such as agent age, vehicle type, order/pickup/delivery time, traffic, weather, and customer rating.
 
-## 🔮 Objectives
+## 🎯 Objectives
 
 - Analyze the relationship between traffic and delivery time
 - Understand if agent age influences ratings or performance
@@ -23,7 +23,7 @@ The dataset contains over 43,000 delivery records and includes information such 
 - Longer delivery times are observed in the afternoon and evening.
 - Surprisingly, delivery time has weak correlation with distance, suggesting traffic, wait time, or agent behavior have greater impact.
 
-### 🧕 Agent Performance
+### 🙎🏻‍♂️ Agent Performance
 
 - Older agents (30+) receive slightly lower ratings and take longer to deliver.
 - Lower ratings may be indirectly caused by longer delivery time, not age itself.
@@ -35,7 +35,7 @@ The dataset contains over 43,000 delivery records and includes information such 
 - Saturday has the lowest average (~53 orders/week)
 - Overall, delivery demand is balanced across weekdays.
 
-### 🌎 Customer Ratings
+### ⭐ Customer Ratings
 
 - Most ratings are between 4.5 and 5.0.
 - Faster deliveries tend to result in higher ratings.
@@ -73,6 +73,6 @@ Focus: Filtered for grocery deliveries
 
 ## ✨ Next Steps
 
-- **Must do:** Segment users for A/B testing based on traffic or delivery time
-- **Maybe do:** Build a distance variable from coordinates
-- **It would be great to do if I had another dataset to join:** Consider integrating customer feedback text or sentiment data
+- **Must do:** Segment users for A/B testing based on traffic or delivery time.
+- **Maybe do:** Build a distance variable from coordinates.
+- **It would be great to do if I had another dataset to join:** Consider integrating customer feedback text or sentiment data.
