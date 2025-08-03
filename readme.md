@@ -76,3 +76,5 @@ Focus: Filtered for grocery deliveries
 - **Must do:** Segment users for A/B testing based on traffic or delivery time to impact rider satisfaction, efficiency, or retention.
 - **Maybe do:** Build a distance variable from coordinates.
 - **It would be great to do if I had another dataset to join:** Consider integrating customer feedback text or sentiment data.
+
+**NOTE:** This project is for learning/demo purposes. Attribution appreciated.
