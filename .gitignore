@@ -1,1 +1,14 @@
+# files
 references.txt
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS system file
+.DS_Store
+
+# Python cache and temp files
+__pycache__/
+*.pyc
+*.pyo
+*.swp

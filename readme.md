@@ -65,7 +65,7 @@ Focus: Filtered for grocery deliveries
 └── README.md
 ```
 
-## ⚖️ Tools Used
+## ⚙️ Tools Used
 
 - Python (Pandas, Seaborn, Matplotlib, Plotly, Folium)
 - Jupyter Notebook
