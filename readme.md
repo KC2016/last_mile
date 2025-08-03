@@ -3,7 +3,7 @@
 
 ## 📄 Project Description
 
-This project explores a last-mile grocery delivery dataset to uncover patterns that affect customer ratings and delivery performance. The goal is to generate actionable insights that support A/B testing and product optimization for logistics platforms like Delivery Hero.
+This project explores a last-mile grocery delivery dataset to uncover patterns that affect customer ratings, rider performance and rider operational flow. The goal is to generate actionable insights that support A/B testing and product optimization for logistics platforms like Delivery Hero.
 
 The dataset contains over 43,000 delivery records and includes information such as agent age, vehicle type, order/pickup/delivery time, traffic, weather, and customer rating.
 
@@ -16,7 +16,7 @@ The dataset contains over 43,000 delivery records and includes information such 
 
 ## 📊 Key Insights
 
-### 🚦 Traffic & Delivery Time
+### 🚦 Traffic & Delivery Time (rider performance)
 
 - Traffic jams are most common between 7 PM and 10 PM.
 - High traffic is also seen between 11 AM and 1 PM.
@@ -62,7 +62,7 @@ Focus: Filtered for grocery deliveries
 │   └── sample_locations_map.html
 ├── delivery_eda.ipynb
 ├── delivery_maps.ipynb
-└── README.md
+└── readme.md
 ```
 
 ## ⚙️ Tools Used
@@ -73,6 +73,6 @@ Focus: Filtered for grocery deliveries
 
 ## ✨ Next Steps
 
-- **Must do:** Segment users for A/B testing based on traffic or delivery time.
+- **Must do:** Segment users for A/B testing based on traffic or delivery time to impact rider satisfaction, efficiency, or retention.
 - **Maybe do:** Build a distance variable from coordinates.
 - **It would be great to do if I had another dataset to join:** Consider integrating customer feedback text or sentiment data.
