@@ -1,7 +1,6 @@
 # 📦 Last-Mile Delivery Insights: A/B Testing with Amazon Dataset
 
-
-## 📄 Project Description
+## 📄 Exploratory Data Analysis - Project Description
 
 This project explores a last-mile grocery delivery dataset to uncover patterns that affect customer ratings, rider performance and rider operational flow. The goal is to generate actionable insights that support A/B testing and product optimization for logistics platforms like Delivery Hero.
 
