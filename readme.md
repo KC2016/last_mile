@@ -55,7 +55,7 @@ Focus: Filtered for grocery deliveries
 ## 📁 Structure
 ```
 ├── data/
-│   ├── ammazoon_delivery.csv
+│   ├── amazon_delivery.csv
 │   └── grocery_cleaned_coordinates.csv
 ├── maps/
 │   └── sample_locations_map.html
