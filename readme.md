@@ -207,16 +207,4 @@ This dataset can directly support meaningful A/B tests, such as:
 This project is intended for educational and research purposes.
 Attribution to dataset creator is included in the repository.
 
-```
 
----
-
-If you want, I can also:
-
-✅ Create a **shorter GitHub version**
-✅ Add badges (Python version, last updated, GitHub stars)
-✅ Write a **CV bullet point** based on this project
-✅ Generate a **Notion version** for your portfolio
-
-Just tell me!
-```
