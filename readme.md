@@ -1,9 +1,5 @@
-Here is the full **GitHub README formatted in clean Markdown (MD)**.
-You can copy and paste it directly into your `README.md`.
 
----
 
-````md
 # 📦 Last-Mile Delivery Insights
 ### *Exploratory Data Analysis + A/B Testing Framework*
 Dataset: **Amazon Delivery Dataset (Grocery filtered) – Kaggle**
