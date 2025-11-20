@@ -1,58 +1,176 @@
-# 📦 Last-Mile Delivery Insights: A/B Testing with Amazon Dataset
+Here is the full **GitHub README formatted in clean Markdown (MD)**.
+You can copy and paste it directly into your `README.md`.
 
-## 📄 Exploratory Data Analysis - Project Description
+---
 
-This project explores a last-mile grocery delivery dataset to uncover patterns that affect customer ratings, rider performance and rider operational flow. The goal is to generate actionable insights that support A/B testing and product optimization for logistics platforms like Delivery Hero.
+````md
+# 📦 Last-Mile Delivery Insights
+### *Exploratory Data Analysis + A/B Testing Framework*
+Dataset: **Amazon Delivery Dataset (Grocery filtered) – Kaggle**
 
-The dataset contains over 43,000 delivery records and includes information such as agent age, vehicle type, order/pickup/delivery time, traffic, weather, and customer rating.
+---
 
-## 🎯 Objectives
+## **1. Project Overview**
+This project explores **43,739** last-mile grocery delivery records to understand how operational factors—such as **traffic**, **agent age**, **delivery timing**, and **weather**—influence:
 
-- Analyze the relationship between traffic and delivery time
-- Understand if agent age influences ratings or performance
-- Identify peak hours and days for grocery delivery
-- Define user segments that could benefit from A/B testing
+- Delivery performance
+- Customer satisfaction (ratings)
+- Rider efficiency
+- Demand patterns
 
-## 📊 Key Insights
+The objective is to generate **data-driven insights** that can support **A/B testing**, operational decisions, and product optimization for logistics platforms such as **Delivery Hero**, **Uber Eats**, or **Amazon**.
 
-### 🚦 Traffic & Delivery Time (rider performance)
+---
 
-- Traffic jams are most common between 7 PM and 10 PM.
-- High traffic is also seen between 11 AM and 1 PM.
-- Longer delivery times are observed in the afternoon and evening.
-- Surprisingly, delivery time has weak correlation with distance, suggesting traffic, wait time, or agent behavior have greater impact.
+## **2. Dataset**
+**Source:** [Kaggle – Amazon Delivery Dataset (Sujal Suthar)](https://www.kaggle.com/datasets/sujalsuthar/amazon-delivery-dataset)
+**Focus:** Grocery delivery subset
 
-### 🙎🏻‍♂️ Agent Performance
+**Size:**
+- **43,739 rows**
+- Rider, delivery, timing, and rating attributes
 
-- Older agents (30+) receive slightly lower ratings and take longer to deliver.
-- Lower ratings may be indirectly caused by longer delivery time, not age itself.
+### **Key Columns**
+| Category | Columns |
+|---------|---------|
+| Agent info | `Agent_Age`, `Agent_Rating`, `Vehicle_Type` |
+| Delivery timing | `Order_Time`, `Pickup_Time`, `Time_of_Day`, `Delivery_Time` |
+| Delivery conditions | `Traffic`, `Weather`, `Distance` |
+| Customer feedback | `Customer_Rating` |
 
-### 🕒 Time-of-Day & Demand
+---
 
-- Peak grocery delivery hours: 5 PM to 9 PM
-- Highest order volumes on Wednesdays and Fridays (~62 orders/week)
-- Saturday has the lowest average (~53 orders/week)
-- Overall, delivery demand is balanced across weekdays.
+## **3. Technical Approach**
 
-### ⭐ Customer Ratings
+### **3.1 Tools & Libraries**
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn, Plotly
+- Folium (for interactive mapping)
+- Jupyter Notebook
+- GitHub for version control
 
-- Most ratings are between 4.5 and 5.0.
-- Faster deliveries tend to result in higher ratings.
-- Ratings are also likely influenced by unobserved factors such as communication, packaging, and professionalism.
+---
 
-### 🗺️ Interactive Map
-View the delivery drop-off locations in this [interactive map (HTML)](http://localhost:8889/files/repositories/my_projects/last_mile/maps/sample_locations_map.html).
+## **3.2 Setup**
 
-## 📂 Dataset
+```bash
+git clone <repo-url>
+cd last-mile-delivery
+pip install -r requirements.txt
+````
 
-Name: Amazon Delivery Dataset
+---
 
-Source: [Kaggle - Sujal Suthar](https://www.kaggle.com/datasets/sujalsuthar/amazon-delivery-dataset)
+## **3.3 Data Cleaning & Feature Engineering**
 
-Focus: Filtered for grocery deliveries
+Implemented in the notebook **delivery_eda.ipynb**:
 
+✔ Converted blank strings → `NaN`
+✔ Filled missing numeric values (<10%) with `mean()`
+✔ Standardized categorical fields (traffic, weather)
+✔ Extracted time-based features:
 
-## 📁 Structure
+* Hour of day
+* Weekday
+* Week number
+* Peak-hour indicator
+
+✔ Created **Haversine distance** variable using coordinates
+✔ Flagged rating anomalies (e.g., values > 5)
+✔ Converted timestamps to datetime objects
+
+> Additional details and code are available in the notebook.
+
+---
+
+## **3.4 Exploratory Data Analysis**
+
+The EDA includes:
+
+### **Traffic & Delivery Time**
+
+* Distribution of traffic levels
+* Delivery time by traffic level
+* Hourly traffic intensity
+
+### **Rider Performance**
+
+* Delivery time vs agent age
+* Rating vs agent age
+* Correlation matrix
+
+### **Demand Analysis**
+
+* Orders by hour
+* Orders by weekday
+* Weekly volume patterns
+
+### **Distance vs Delivery Time**
+
+* Scatterplots
+* Low correlation → traffic and operational delays matter more
+
+### **Mapping**
+
+* Interactive **Folium** map of drop-off coordinates
+* Allows geographic inspection of delivery clusters
+
+---
+
+## **4. Key Insights**
+
+### **🚦 Traffic & Delivery Time**
+
+* Highest congestion at **11 AM–1 PM** and **7 PM–10 PM**
+* Delivery durations increase significantly during these periods
+* Distance is a **weak predictor** of delivery time → operational delays dominate
+
+### **🙎 Rider Performance**
+
+* Agents **30+** are slower and receive slightly lower ratings
+* Ratings decline is driven by late deliveries, not the agent's age
+* Strong segment for targeted improvement
+
+### **🕒 Demand Patterns**
+
+* Peak delivery hours: **5 PM–9 PM**
+* Peak weekdays: **Wednesday & Friday** (~62 orders/week)
+* Lowest: **Saturday** (~53 orders/week)
+* Demand is stable across the week but time-dependent
+
+### **⭐ Customer Ratings**
+
+* Most ratings range from 4.5 to 5.0
+* Faster deliveries strongly correlate with higher ratings
+* Hidden factors like communication or packaging likely influence satisfaction
+
+---
+
+## **5. A/B Testing Opportunities**
+
+This dataset can directly support meaningful A/B tests, such as:
+
+### **A/B Test 1 — Rider Assignment by Traffic Level**
+
+**Hypothesis:** Routing younger or faster agents during high-traffic windows reduces delays.
+
+### **A/B Test 2 — Optimized Pickup Scheduling**
+
+**Hypothesis:** Adjusting pickup workflows during peak hours improves delivery time.
+
+### **A/B Test 3 — Experience-Based Task Allocation**
+
+**Hypothesis:** Matching certain agents to specific time-of-day segments increases efficiency.
+
+### **A/B Test 4 — Customer Rating Improvement Interventions**
+
+**Hypothesis:** Improving communication or visibility of ETA boosts satisfaction.
+
+---
+
+## **6. Repository Structure**
+
 ```
 ├── data/
 │   ├── amazon_delivery.csv
@@ -61,19 +179,44 @@ Focus: Filtered for grocery deliveries
 │   └── sample_locations_map.html
 ├── delivery_eda.ipynb
 ├── delivery_maps.ipynb
-└── readme.md
+└── README.md
 ```
 
-## ⚙️ Tools Used
+---
 
-- Python (Pandas, Seaborn, Matplotlib, Plotly, Folium)
-- Jupyter Notebook
-- GitHub for version control
+## **7. Next Steps**
 
-## ✨ Next Steps
+### **Must Do**
 
-- **Must do:** Segment users for A/B testing based on traffic or delivery time to impact rider satisfaction, efficiency, or retention.
-- **Maybe do:** Build a distance variable from coordinates.
-- **It would be great to do if I had another dataset to join:** Consider integrating customer feedback text or sentiment data.
+* Develop rider and user segmentation for A/B testing
+* Build testing variants based on traffic and delivery time profiles
 
-**NOTE:** This project is for learning/demo purposes. Attribution appreciated.
+### **Nice to Have**
+
+* Add additional features (store-to-customer path, urban density, weather)
+
+### **If additional data is available**
+
+* Integrate customer text feedback for sentiment analysis
+* Build a predictive model for delivery-time estimation
+
+---
+
+## **8. Notes**
+
+This project is intended for educational and research purposes.
+Attribution to dataset creator is included in the repository.
+
+```
+
+---
+
+If you want, I can also:
+
+✅ Create a **shorter GitHub version**
+✅ Add badges (Python version, last updated, GitHub stars)
+✅ Write a **CV bullet point** based on this project
+✅ Generate a **Notion version** for your portfolio
+
+Just tell me!
+```
