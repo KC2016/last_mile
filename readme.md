@@ -207,7 +207,7 @@ Attribution to dataset creator is included in the repository.
 
 ---
 
-## II. A/B Testing: Optimizing Delivery Efficiency 📉
+## II. A/B Testing: Optimizing Delivery Efficiency (offline / simulated) 📉
 
 Based on the insights from the Exploratory Data Analysis (EDA)—specifically the finding that traffic density has a higher correlation with delays than geographic distance—this section outlines a proposed experiment to optimize delivery times.
 
