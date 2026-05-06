@@ -16,10 +16,12 @@ Based on these results, I would not ship the new dispatch strategy at this stage
 
 Overall, the project demonstrates how I move from data exploration to hypothesis generation and experimental validation to support product decisions in a data-driven way.
 
+---
+
+
 ## I. Exploratory Data Analysis
 Dataset: **Amazon Delivery Dataset (Grocery filtered) – Kaggle**
 
----
 
 ### 1. Project Overview
 This project explores **43,739** last-mile grocery delivery records to understand how operational factors—such as **traffic**, **agent age**, **delivery timing**, and **weather**—influence:
@@ -31,7 +33,6 @@ This project explores **43,739** last-mile grocery delivery records to understan
 
 The objective is to generate **data-driven insights** that can support **A/B testing**, operational decisions, and product optimization for logistics platforms such as **Delivery Hero**, **Uber Eats**, or **Amazon**.
 
----
 
 ### 2. Dataset
 **Source:** [Kaggle – Amazon Delivery Dataset (Sujal Suthar)](https://www.kaggle.com/datasets/sujalsuthar/amazon-delivery-dataset)
@@ -61,7 +62,6 @@ The objective is to generate **data-driven insights** that can support **A/B tes
 - Jupyter Notebook
 - GitHub for version control
 
----
 
 ### 3.2 Setup
 
@@ -71,7 +71,6 @@ cd last-mile-delivery
 pip install -r requirements.txt
 ````
 
----
 
 ### 3.3 Data Cleaning & Feature Engineering
 
@@ -93,7 +92,6 @@ Implemented in the notebook **delivery_eda.ipynb**:
 
 > Additional details and code are available in the notebook.
 
----
 
 ### 3.4 Exploratory Data Analysis (EDA)
 
@@ -127,7 +125,6 @@ The EDA includes:
 * Interactive **Folium** map of drop-off coordinates
 * Allows geographic inspection of delivery clusters
 
----
 
 ### 4. Key Insights
 
@@ -156,7 +153,6 @@ The EDA includes:
 * Faster deliveries strongly correlate with higher ratings
 * Hidden factors like communication or packaging likely influence satisfaction
 
----
 
 ### 5. A/B Testing Opportunities
 
@@ -173,7 +169,6 @@ This dataset can directly support meaningful A/B tests, such as:
 - A/B Test 4 — Customer Rating Improvement Interventions -
 **Hypothesis:** Improving communication or visibility of ETA boosts satisfaction.
 
----
 
 ### 6. Repository Structure
 
@@ -187,8 +182,6 @@ This dataset can directly support meaningful A/B tests, such as:
 ├── delivery_maps.ipynb
 └── README.md
 ```
-
----
 
 ### 7. Next Steps
 
@@ -206,13 +199,13 @@ This dataset can directly support meaningful A/B tests, such as:
 * Integrate customer text feedback for sentiment analysis
 * Build a predictive model for delivery-time estimation
 
----
 
 ### 8. Notes
 
 This project is intended for educational and research purposes.
 Attribution to dataset creator is included in the repository.
 
+---
 
 ## II. A/B Testing: Optimizing Delivery Efficiency 📉
 
