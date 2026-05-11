@@ -37,7 +37,7 @@ To understand what truly drives the operation's pace, we analyzed external varia
   <img src="images/traffic_impact.png" width="70%" />
 </p>
 
-* **Analysis:** High traffic density doesn't just increase average time—it aggressively expands variance. We identified traffic as the primary "villain" of predictability, necessitating dynamic buffer times.
+* **Analysis:** High traffic density doesn't just increase average time, it aggressively expands variance. We identified traffic as the primary "villain" of predictability, necessitating dynamic buffer times.
 
 ### 4. Distance vs. Delivery Time
 <p align="center">
