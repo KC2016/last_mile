@@ -43,21 +43,6 @@ Treatment: prioritize high-rated agents in high traffic
 - Limited feature scope (no full dispatch logic)
 - No real-world data
 
-## 🔵 3. Experiment 2 (A/B Test Simulation – Core Project)
-### 🧪 Objective
-
-Evaluate whether a traffic-aware dispatch system improves delivery efficiency compared to a baseline proximity-based system.
-
-### 🧪 Experiment Design
-Control: proximity-based assignment
-Treatment: traffic-aware dispatch system
-
-### 📊 Result
-- 📈 9% increase in delivery time
-- 🧪 statistically significant (p = 0.034)
-
-### 💡 Insight
-- Traffic-aware dispatch system may not be suitable for high traffic conditions.
 
 ## 🔵 3. Experiment 2 (A/B Test Simulation – Core Project)
 ### 🧪 Objective
