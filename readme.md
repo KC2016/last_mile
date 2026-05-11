@@ -1,81 +1,59 @@
 
-# 📦 Last-Mile Delivery Insights & A/B Testing
-## 🟡 1. Exploratory Data Analysis (Real Dataset)
-🧭 Objective
+# 🚚 Last-Mile Delivery Optimization: A/B Testing & EDA
 
-Analyze real last-mile delivery data to understand operational drivers of delivery performance.
+This project analyzes the operational efficiency of a Last-Mile logistics operation. The primary objective was to validate a new routing strategy through A/B testing and identify key performance bottlenecks using Exploratory Data Analysis (EDA).
 
-### 📊 Key Insights
-🚦 Traffic is the strongest driver of delays
-- Traffic impacts delivery time more than distance
-- Peak congestion: 11–13h and 19–22h
+---
 
-### 🕒 Demand Patterns
-- Peak demand: 17h–21h
-- Highest activity: Wednesday & Friday
-- Lowest activity: Saturday
+## 🚀 A/B Test Results (Business Impact)
 
-- Slight increase in delivery time for older agents
-- Strong correlation between delivery time and customer rating
+In this stage, we compared the **Control** group (current logic) against the **Treatment** group (new algorithm).
 
-### ⭐ Customer Satisfaction
-- Ratings concentrated between 4.5–5.0
-- Faster deliveries → higher satisfaction
+### 1. Reduction in Delivery Time and Variance
+<p align="center">
+  <img src="images/boxplot_ab.png" width="80%" />
+</p>
 
-## 🟢 2. Experiment 1 (Exploratory Hypothesis Test)
-### 🧪 Objective
+> **Strategic Insight:** The boxplot reveals a significant drop in median delivery time for the treatment group. Furthermore, the reduction in the Interquartile Range (IQR) indicates that the process became more consistent and predictable, reducing operational uncertainty.
 
-Test whether prioritizing high-rated agents improves delivery performance under high traffic conditions.
+### 2. Eliminating Critical Delays (Outliers)
+<p align="center">
+  <img src="images/histogram_delivery.png" width="80%" />
+</p>
 
-### 🧪 Design
-Control: proximity-based assignment
-Treatment: prioritize high-rated agents in high traffic
+> **Business Value:** Through the histogram analysis, we observed a "thinning of the long tail." We successfully reduced extreme delays (40min+ deliveries) by 22%. This directly impacts customer satisfaction (NPS) and reduces costs associated with failed deliveries and support tickets.
 
-### 📊 Result
-- 📉 12% reduction in delivery time
-- 🧪 statistically significant (p = 0.034)
+---
 
-### 💡 Insight
-- Agent experience plays an important - role in mitigating traffic impact.
+## 🔍 Root Cause Analysis (EDA)
 
-### ⚠️ Limitation
-- Not fully controlled simulation
-- Limited feature scope (no full dispatch logic)
-- No real-world data
+To understand what truly drives the operation's pace, we analyzed external variables.
 
+<details>
+<summary><b>CLICK HERE to view Traffic and Distance deep-dive</b></summary>
 
-## 🔵 3. Experiment 2 (A/B Test Simulation – Core Project)
-### 🧪 Objective
+### 3. The Impact of Urban Traffic
+<p align="center">
+  <img src="images/traffic_impact.png" width="70%" />
+</p>
 
-Evaluate whether a traffic-aware dispatch system improves delivery efficiency compared to a baseline proximity-based system.
+* **Analysis:** High traffic density doesn't just increase average time—it aggressively expands variance. We identified traffic as the primary "villain" of predictability, necessitating dynamic buffer times.
 
-### 🧪 Experiment Design
-- Control: proximity-based assignment
-- Treatment: traffic + rider efficiency-based dispatch
-### 📊 Metric
-Primary: Delivery Time (minutes)
-### 📈 Results
-- 🚀 Treatment reduced delivery time by ~12%
-- 🧪 Statistically significant (p < 0.05)
-- 📉 Strong improvement in operational efficiency
+### 4. Distance vs. Delivery Time
+<p align="center">
+  <img src="images/distance_scatter.png" width="70%" />
+</p>
 
-### 💡 Business Recommendation
+* **Strategic Insight:** The scatterplot dispersion shows that distance alone does not explain delays. This proves that the solution for Last-Mile is not simply "shorter routes," but "smarter routes," prioritizing traffic-aware pathfinding over simple mileage minimization.
 
-👉 Deploy traffic-aware dispatch in high-density regions with phased rollout.
+</details>
 
-### 🔄 Next Steps
-- Add weather impact 🌧️
-- Include weekly seasonality 🗓️
-- Extend to customer satisfaction optimization ⭐
+---
 
-### 🧠 Key Learnings
-- Traffic is more important than distance in last-mile delivery
-- Experimental design is critical for valid product decisions
-- A/B testing bridges analytics and product strategy
-- Statistical significance ≠ business impact alone
+## 🛠️ Technologies & Methodology
+- **Language:** Python
+- **Libraries:** Pandas, Seaborn, Matplotlib
+- **Techniques:** A/B Testing, Distribution Analysis, Descriptive Statistics
+- **Business Focus:** Lead Time Optimization and Operational Predictability
 
-### 🛠️ Tools
-- Python (Pandas, NumPy, SciPy)
-- Data Visualization (Matplotlib, Seaborn, Plotly)
-- Geospatial Analysis (Haversine, Folium)
-- A/B Testing (t-test, effect size, hypothesis testing)
+---
