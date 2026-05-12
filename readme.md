@@ -51,6 +51,16 @@ To understand what truly drives the operation's pace, we analyzed external varia
 
 ---
 
+## 🚀 Key Results & Business Impact
+
+The A/B test yielded significant improvements across all primary logistics KPIs:
+
+* **Efficiency:** Achieved a **23.50% reduction** in median delivery time, streamlining the overall operation.
+* **Reliability:** Successfully reduced critical delays (deliveries over 40 minutes) by **86.48%**. This drastically minimizes failed delivery windows and enhances the customer experience.
+* **Strategic Finding:** Exploratory analysis confirmed that traffic density has a higher impact on lead-time variance than distance, validating the transition to a traffic-aware routing model.
+
+---
+
 ## 🛠️ Technologies & Methodology
 - **Language:** Python
 - **Libraries:** Pandas, Seaborn, Matplotlib
