@@ -61,6 +61,16 @@ The A/B test yielded significant improvements across all primary logistics KPIs:
 
 ---
 
+## ⚠️ Bias & Limitations
+
+This experiment is based on a simulated environment and includes simplifying assumptions that differ from real-world systems.
+- **No feedback loop:** Orders were randomly assigned to control and treatment, preventing dynamic reallocation of demand. In production systems, more efficient strategies may receive more orders, introducing selection bias.
+- **No interference between groups:** The setup assumes independence between control and treatment, which may not hold in real dispatch systems where resources are shared.
+- **Simplified dispatch logic:** The treatment uses a simplified representation of traffic and rider efficiency, rather than a fully optimized routing system.
+- **Synthetic data:** Results depend on simulated data and may not fully reflect real operational complexity.
+
+---
+
 ## 🛠️ Technologies & Methodology
 - **Language:** Python
 - **Libraries:** Pandas, Seaborn, Matplotlib
