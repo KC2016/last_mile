@@ -5,7 +5,7 @@ This project analyzes the operational efficiency of a Last-Mile logistics operat
 
 ---
 
-## 🚀 A/B Test Results (Business Impact)
+## 🚀 A/B Test Results
 
 In this stage, we compared the **Control** group (current logic) against the **Treatment** group (new algorithm).
 The treatment represents a context-aware dispatch strategy that goes beyond simple proximity-based assignment. Instead of only selecting the nearest rider, it incorporates additional operational signals such as **traffic conditions**, **rider speed**, and **rider rating** to estimate which rider is likely to complete the delivery more efficiently. This shift from a static rule to a dynamic, context-driven decision model is designed to better reflect real-world logistics constraints and improve overall delivery performance.
